@@ -1,0 +1,40 @@
+<TodoListApp>:
+   BoxLayout:
+        orientation: 'vertical'
+        padding: 10
+
+        TextInput:
+            id: task_input
+            hint_text: "Enter a task"
+            multiline: False
+            size_hint: (1, None)
+
+        MDRaisedButton:
+            text: "Add Task"
+            size_hint: (1, None)
+            on_release: root.add_task(self)
+
+        BoxLayout:
+            id: task_list
+            orientation: 'vertical'
+            spacing: 5
+
+<TaskLayout>:
+    orientation: 'horizontal'
+    spacing: 5
+
+    Label:
+        id: task_label
+        color: (0, 0, 0, 1) if not root.completed else (0.5, 0.5, 0.5, 1)
+
+    MDRaisedButton:
+        text: "Delete"
+        size_hint: (None, None)
+        height: 30
+        on_release: root.delete_task()
+
+    MDRaisedButton:
+        id: complete_button
+        size_hint: (None, None)
+        height: 30
+        on_release: root.toggle_complete_task()
