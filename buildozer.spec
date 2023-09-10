@@ -1,7 +1,7 @@
 [app]
 
 # (str) Title of your application
-title = To-Do List [Sidon]
+title = ToDoList
 
 # (str) Package name
 package.name = myapp
