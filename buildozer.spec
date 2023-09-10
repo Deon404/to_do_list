@@ -6,7 +6,6 @@ title = ToDoList
 # (str) Package name
 package.name = myapp
 
-icon.filename = app_icon.png
 
 # (str) Package domain (needed for android/ios packaging)
 package.domain = org.test
